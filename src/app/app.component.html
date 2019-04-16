@@ -1,0 +1,25 @@
+
+  <!-- <button mat-button routerLink="/color-picker">
+    <mat-icon>colorize</mat-icon>
+    Color Picker
+  </button> -->
+
+ <!-- RESET USED COLORS -->
+<mat-card>
+  
+
+  <mat-card-content>
+
+    <button mat-button (click)="reset()">Choose color</button>
+
+    <mcc-color-picker>
+
+      <mcc-color-picker-collection [label]="'First Object Collection'">
+      </mcc-color-picker-collection>
+
+    </mcc-color-picker>
+  </mat-card-content>
+</mat-card>
+
+
+<router-outlet></router-outlet>
