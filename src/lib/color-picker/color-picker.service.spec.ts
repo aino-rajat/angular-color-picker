@@ -1,11 +1,11 @@
 import { TestBed } from '@angular/core/testing';
-import { MccColorPickerService } from './color-picker.service';
+import { AoppsColorPickerService } from './color-picker.service';
 import { EMPTY_COLOR, USED_COLORS } from './color-picker';
 import { doesNotThrow } from 'assert';
 
 describe('MccColorPickerService', () => {
   const color = '#FFFFFF';
-  let service: MccColorPickerService;
+  let service: AoppsColorPickerService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
@@ -17,7 +17,7 @@ describe('MccColorPickerService', () => {
 
     const emptyColorToken = TestBed.get(EMPTY_COLOR);
     const usedColorsToken = TestBed.get(USED_COLORS);
-    service = new MccColorPickerService(emptyColorToken, usedColorsToken);
+    service = new AoppsColorPickerService(emptyColorToken, usedColorsToken);
   });
 
   it('should add color', (done: DoneFn) => {

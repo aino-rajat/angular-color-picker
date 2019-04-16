@@ -48,13 +48,13 @@ import {
     { provide: USED_COLORS, useValue: [] }
   ],
 })
-export class MccColorPickerModule {
+export class AppopsColorPickerModule {
   /**
    *
    */
   static forRoot(config: ColorPickerConfig): ModuleWithProviders {
     return {
-      ngModule: MccColorPickerModule,
+      ngModule: AppopsColorPickerModule,
       providers: [
         { provide: EMPTY_COLOR, useValue: config.empty_color || 'none' },
         { provide: USED_COLORS, useValue: config.used_colors || [] }

@@ -9,7 +9,7 @@ import { MatButtonModule, MatInputModule, MatFormFieldModule } from '@angular/ma
 import { MccColorPickerComponent } from './color-picker.component';
 import { MccColorPickerSelectorComponent } from './color-picker-selector.component';
 import { MccColorPickerCollectionComponent } from './color-picker-collection.component';
-import { MccColorPickerService } from './color-picker.service';
+import { AoppsColorPickerService } from './color-picker.service';
 import { 
   MccConnectedColorPickerDirective,
   MccColorPickerOriginDirective,
@@ -46,7 +46,7 @@ class TestComponent implements OnInit {
 describe('MccConnectedColorPickerdirective', () => {
   let comp: TestComponent;
   let fixture: ComponentFixture<TestComponent>;
-  let service: MccColorPickerService;
+  let service: AoppsColorPickerService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
@@ -69,13 +69,13 @@ describe('MccConnectedColorPickerdirective', () => {
         MccConnectedColorPickerDirective
       ],
       providers: [
-        MccColorPickerService,
+        AoppsColorPickerService,
         { provide: EMPTY_COLOR, useValue: 'none'},
         { provide: USED_COLORS, useValue: [] }
       ]
     });
 
-    service = TestBed.get(MccColorPickerService);
+    service = TestBed.get(AoppsColorPickerService);
     fixture = TestBed.createComponent(TestComponent);
     comp = fixture.componentInstance;
   });
